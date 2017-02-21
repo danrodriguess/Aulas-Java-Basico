@@ -1,19 +1,27 @@
+package br.unipe.java.unidade1;
+
+import java.util.Scanner;
+
 public class Principal {
 
-	public static void main(String[] args){
-		ObjetoCarro carro = new ObjetoCarro();
+	public static void main(String[] args) {
+
+		Scanner leitor = new Scanner(System.in);
+		Cachorro cachorro = new Cachorro();
 		
-		carro.setNomeCarro("Prisma");
-		carro.setCorCarro("Prata");
-		carro.setMarcaCarro("Chevrolet");
-		carro.setMotorCarro("1.4");
+		System.out.println("Informe o nome do seu cachorro: ");
+		cachorro.nome = leitor.nextLine();
+		cachorro.late();
 		
-		System.out.println("-------------Informacoes do veiculo-------------\n");
-		System.out.println("-> Nome: "+carro.getNomeCarro());
-		System.out.println("\n-> Marca: "+carro.getMarcaCarro());
-		System.out.println("\n-> Cor: "+carro.getCorCarro());
-		System.out.println("\n-> Motor: "+carro.getMotorCarro());
-		System.out.println("\n------------------------------------------------\n");
+		Carro ferrari = new Carro();
+		ferrari.avancar();
+		ferrari.retroceder();
+		
+		Carro camaro = new Carro();
+		camaro.abastecer();
+		camaro.parar();
+		
+		leitor.close();
 	}
-	
+
 }
